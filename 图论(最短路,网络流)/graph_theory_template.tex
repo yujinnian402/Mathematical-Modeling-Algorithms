@@ -1,0 +1,15 @@
+\section{图论算法建模}
+\subsection{最短路算法}
+设有加权有向图 $G=(V,E)$，边权为 $w(u,v)$，采用Dijkstra算法求单源最短路径。核心转移为：
+\[
+d(s,v) = \min\{d(s,u) + w(u,v) \mid (u,v) \in E \}
+\]
+详见代码与流程。
+
+\subsection{网络流算法}
+设容量网络 $G=(V,E)$，每条边容量 $c(u,v)$，采用Edmonds-Karp算法求最大流，约束：
+\[
+\sum_{(u,v)\in E} f(u,v) \leq c(u,v)\,,\quad \sum_{u:(u,v)\in E} f(u,v) = \sum_{w:(v,w)\in E} f(v,w),\quad \forall v \neq s,t
+\]
+
+具体实现见附录代码.
